@@ -1,0 +1,182 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+/* Header Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #aaa;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #000, #000);
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.counters {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.counter {
+    text-align: center;
+}
+
+.counter h2 {
+    font-size: 48px;
+    margin: 0;
+    color: #ff9900;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+}
+
+#about, #services, #testimonials, #contact {
+    text-align: center;
+}
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles for About Us Section */
+#about-us {
+    padding: 40px;
+    background-color: #f5f5f5; /* Slightly off-white background */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* About Us Paragraphs Sliding Animation */
+#about-us p {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(50px); /* Start position for sliding effect */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Animation properties */
+    will-change: transform, opacity; /* Hint to browser for optimization */
+}
+
+#about-us p.slide-in {
+    opacity: 1; /* Fade in when it comes into view */
+    transform: translateX(0); /* End position */
+}
+
+/* For odd paragraphs, slide them in from the left */
+#about-us p:nth-child(odd) {
+    transform: translateX(-50px); /* Start position for left slide */
+}
+
+/* For even paragraphs, slide them in from the right */
+#about-us p:nth-child(even) {
+    transform: translateX(50px); /* Start position for right slide */
+}
+
+/* Media Query for Larger Screens (Laptop and Desktop and mobile) */
+@media (min-width: 768px) {
+    #about-us p {
+        transform: translateX(0); /* Reset transform for larger screens */
+    }
+
+    #about-us p.slide-in {
+        transition: opacity 0.6s ease, transform 0.6s ease; /* Ensure smooth transition on larger screens */
+    }
+}
+
+
+blockquote {
+    font-style: italic;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+form input, form textarea, form button {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #ff9900;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ffa31a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+}
