@@ -38,14 +38,14 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #aaa;
+    color: #000;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(to right, #000, #000);
+    background: linear-gradient(to right, #000, #000); /* Slight gradient */
 }
 
 .hero h1 {
@@ -82,23 +82,8 @@ section {
 #about, #services, #testimonials, #contact {
     text-align: center;
 }
-   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* General Styles for About Us Section */
+/* About Us Section */
 #about-us {
     padding: 40px;
     background-color: #f5f5f5; /* Slightly off-white background */
@@ -129,7 +114,7 @@ section {
     transform: translateX(50px); /* Start position for right slide */
 }
 
-/* Media Query for Larger Screens (Laptop and Desktop and mobile) */
+/* Media Query for Larger Screens (Laptop and Desktop) */
 @media (min-width: 768px) {
     #about-us p {
         transform: translateX(0); /* Reset transform for larger screens */
@@ -141,22 +126,18 @@ section {
 }
 
 
-blockquote {
-    font-style: italic;
-    margin: 20px auto;
-    max-width: 600px;
-}
-
 /* Contact Form */
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    max-width: 600px; /* Limit form width */
+    margin: 0 auto;
 }
 
 form input, form textarea, form button {
-    width: 300px;
+    width: 100%; /* Make inputs take full width */
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -179,4 +160,5 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #000;
+    color: #fff;
 }
