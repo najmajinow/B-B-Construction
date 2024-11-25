@@ -2,8 +2,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const counters = [
         { element: document.getElementById("yearsOfService"), target: 10 },
-        { element: document.getElementById("clientsServed"), target: 500 },
-        { element: document.getElementById("projectsCompleted"), target: 300 },
+        { element: document.getElementById("clientsServed"), target: 100 },
+        { element: document.getElementById("projectsCompleted"), target: 100 },
     ];
 
     counters.forEach((counter) => {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         },
-        { threshold: 0.3 } // Trigger animation when 30% of the element is in view
+        { threshold: 0.5} // Trigger animation when 30% of the element is in view
     );
 
     paragraphs.forEach((paragraph, index) => {

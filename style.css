@@ -2,9 +2,14 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #000;
-    color: #fff;
+    background-color: #f9e076; /* Soft yellow */
+    color: #1f77d0;
     scroll-behavior: smooth;
+}
+
+/* Main Titles for About Us, Services, Testimonials, and Contact pages */
+#about-us h2, #services h2, #testimonials h2, #contact h2 {
+    color: #000000; /* Change main titles color to black */
 }
 
 /* Header Navigation */
@@ -13,7 +18,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #000;
+    background-color: #f9e076; /* Soft yellow */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -32,20 +37,20 @@ header nav ul {
 
 header nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #1f77d0;
     font-size: 18px;
     transition: color 0.3s;
 }
 
 header nav ul li a:hover {
-    color: #000;
+    color: #f9e076; /* Matches header background */
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(to right, #000, #000); /* Slight gradient */
+    background: linear-gradient(to right, #f9e076, #f9e076); /* Soft yellow gradient */
 }
 
 .hero h1 {
@@ -71,7 +76,7 @@ header nav ul li a:hover {
 .counter h2 {
     font-size: 48px;
     margin: 0;
-    color: #ff9900;
+    color: #1f77d0; /* Nice blue */
 }
 
 /* Sections */
@@ -83,48 +88,106 @@ section {
     text-align: center;
 }
 
+#services {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9e076;
+}
+
+#services h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #000000; /* Changed to black */
+}
+
+#services p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-item {
+    background-color: #f9e076;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item .material-icons {
+    font-size: 40px;
+    color: #007BFF; /* Icon color */
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #1f77d0;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #1f77d0;
+}
+
 /* About Us Section */
 #about-us {
-    padding: 40px;
-    background-color: #f5f5f5; /* Slightly off-white background */
+    background-color: #f9e076; /* Light background for contrast */
+    color: #1f77d0; /* Dark text for readability */
+    text-align: center; /* Centers the text horizontally */
+    padding: 40px 20px; /* Adds spacing around the content */
+    margin: 0 auto; /* Centers the section in the container */
+    max-width: 1200px; /* Restricts width for better layout on large screens */
+    position: relative; /* Avoids stacking issues */
+    z-index: 1; /* Ensures it appears above other elements */
+}
+
+/* Gallery Section */
+#gallery {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9e076;
+}
+
+#gallery h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* About Us Paragraphs Sliding Animation */
-#about-us p {
-    opacity: 0; /* Initially hidden */
-    transform: translateX(50px); /* Start position for sliding effect */
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Animation properties */
-    will-change: transform, opacity; /* Hint to browser for optimization */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-#about-us p.slide-in {
-    opacity: 1; /* Fade in when it comes into view */
-    transform: translateX(0); /* End position */
+.gallery-item img:hover {
+    transform: scale(1.05);
 }
-
-/* For odd paragraphs, slide them in from the left */
-#about-us p:nth-child(odd) {
-    transform: translateX(-50px); /* Start position for left slide */
-}
-
-/* For even paragraphs, slide them in from the right */
-#about-us p:nth-child(even) {
-    transform: translateX(50px); /* Start position for right slide */
-}
-
-/* Media Query for Larger Screens (Laptop and Desktop) */
-@media (min-width: 768px) {
-    #about-us p {
-        transform: translateX(0); /* Reset transform for larger screens */
-    }
-
-    #about-us p.slide-in {
-        transition: opacity 0.6s ease, transform 0.6s ease; /* Ensure smooth transition on larger screens */
-    }
-}
-
 
 /* Contact Form */
 form {
@@ -144,21 +207,21 @@ form input, form textarea, form button {
 }
 
 form button {
-    background-color: #ff9900;
-    color: #000;
+    background-color: #1f77d0; /* Nice blue */
+    color: #f9e076; /* Soft yellow text */
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 form button:hover {
-    background-color: #ffa31a;
+    background-color: #2269ad; /* Darker blue */
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #000;
-    color: #fff;
+    background-color: #f9e076; /* Soft yellow */
+    color: #1f77d0;
 }
