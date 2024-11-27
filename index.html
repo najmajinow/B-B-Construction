@@ -3,58 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Website</title>
+    <title>Evans Builder</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header with Navigation -->
-    <header>
-        <div class="logo">Evans builders</div>
-        
-        <nav>
-            <ul class="menu">
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Evans Builder</h1>
+        <!-- Hamburger menu icon -->
+        <div class="menu icon" onclick="toggleMenu()">
+            &#9776; Menu
+        </div>
+        <nav class="nav" id="navbar">
+            <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#Gallery">Gallery</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact" id="contactBtn">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Home Section -->
-    <section id="home">
-        <div class="hero">
-            <h1> welcome to Evans builders</h1>
-            <p>We Deliver Excellence</p>
-            <div class="counters">
-                <div class="counter">
-                    <h2 id="yearsOfService">0</h2>
-                    <p>Years of Service</p>
-                </div>
-                <div class="counter">
-                    <h2 id="clientsServed">0</h2>
-                    <p>Clients Served</p>
-                </div>
-                <div class="counter">
-                    <h2 id="projectsCompleted">0</h2>
-                    <p>Projects Completed</p>
-                </div>
+    <section id="home" class="home">
+        <h2>Welcome to Evans Builders</h2>
+        <p>Your trusted partner in quality construction and innovation.</p>
+
+        <!-- Countdown Section -->
+        <div class="countdown">
+            <div class="counter-item">
+                <h3 id="yearsOfExperience">0</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="counter-item">
+                <h3 id="projectsCompleted">0</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="counter-item">
+                <h3 id="clientsServed">0</h3>
+                <p>Clients Served</p>
             </div>
         </div>
     </section>
 
     <!-- About Us Section -->
-    
-    <section id="about-us">
-        <h2>About Evans Builders Construction</h2>
-        <p>Evans Builders Construction is a highly reputable construction company based in Cape Town, known for providing exceptional construction services to both residential and commercial clients. As a proudly Zimbabwean-owned business, we bring years of experience, technical expertise, and a strong commitment to delivering high-quality craftsmanship. Whether you are building a new home, renovating an existing property, or managing a large-scale commercial project, Evans Builders Construction is the trusted name you can rely on.</p>
-        
-        
-    
-        <p>Whether you need a new roof, a complete home renovation, or specialized construction services, Evans Builders Construction is here to help. We are proud of our work and the lasting relationships we have built with our clients. Our team works hard to ensure that every project is completed on time, within budget, and to the highest quality standards. Contact us today to discuss your next project with Evans Builders Construction, the trusted construction company in Cape Town.</p>
+    <section class="about" id="about">
+        <h2>About Evans Builders</h2>
+        <p>
+            Welcome to Evans Builders, a proudly Zimbabwean-owned construction company serving Cape Town and surrounding areas. With a legacy of dedication and excellence, we specialize in offering a wide range of construction services, including residential builds, commercial projects, renovations, and custom solutions. Our mission is to transform your vision into reality by delivering projects that are not only functional but also timeless in design and quality.
+        </p>
+        <p>
+            At Evans Builders, we believe that construction is more than just building structures; it’s about creating spaces that enhance lives and inspire communities. Our team of experienced professionals is committed to upholding the highest standards of craftsmanship, ensuring every project is completed with precision and care. From concept to completion, we work closely with our clients to provide innovative and cost-effective solutions tailored to meet their unique needs. Choose Evans Builders for reliable, efficient, and customer-focused construction services in Cape Town.
+        </p>
     </section>
     
+    
+
+
+
+
+
+    
+    
 
 
 
@@ -65,145 +77,73 @@
 
 
 
+    
 
 
-
-
-
-
-
-
-<!-- Services Section -->
-<section id="services">
-    <h2>Our Services</h2>
-
-    <div class="services-container">
-        <div class="service-item">
-            <span class="material-icons">
-            <h3>Brickwork</h3>
-            <p>We provide high-quality brickwork for both residential and commercial buildings, ensuring strong, durable structures.</p>
-        
-        </div>
-
-        <div class="service-item">
-            <span class="material-icons">
-            <h3>Plastering</h3>
-            <p>Our plastering services offer smooth, durable finishes for walls and ceilings, enhancing the overall look of your property.</p>
-        </div>
-
-        <div class="service-item">
-            <span class="material-icons">
-            <h3>Skimming</h3>
-            <p>We specialize in skimming to create a flawless, polished surface ready for painting or wallpapering.</p>
-        </div>
-
-        <div class="service-item">
-            <span class="material-icons">
-            <h3>Tiling</h3>
-            <p>Our tiling service provides precision and expertise, ensuring beautiful, lasting results for floors, walls, and other surfaces.</p>
-        </div>
-
-        <div class="service-item">
-            <span class="material-icons">
-            <h3>Paving</h3>
-            <p>From driveways to patios, we offer professional paving services, creating strong and attractive outdoor spaces.</p>
-        </div>
-
-        <div class="service-item">
-            <span class="material-icons">
-            <h3>Roofing</h3>
-            <p>We install and repair roofs with the highest standards, ensuring your home or business stays protected and secure.</p>
-        </div>
-
-        <div class="service-item">
-            <span class="material-icons">
-            <h3>Ceilings</h3>
-            <p>Our ceiling installation services help enhance the aesthetic appeal of your space while ensuring safety and quality.</p>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Gellery Section -->
-
-<section id="gallery">
-    <h2>Our Gallery</h2>
-
-    <div class="gallery-container">
-        <div class="gallery-item">
-            <img src="images/project1.jpg" alt="Gallery Image 1">
-        </div>
-        <div class="gallery-item">
-            <img src="images/project2.jpg" alt="Gallery Image 2">
-        </div>
-        <div class="gallery-item">
-            <img src="images/project3.jpg" alt="Gallery Image 3">
-        </div>
-        <div class="gallery-item">
-            <img src="images/project4.jpg" alt="Gallery Image 4">
-        </div>
-        <div class="gallery-item">
-            <img src="images/project5.jpg" alt="Gallery Image 5">
-        </div>
-        <div class="gallery-item">
-            <img src="images/project6.jpg" alt="Gallery Image 6">
-        </div>
-        <div class="gallery-item">
-            <img src="images/project7.jpg" alt="gallery Image 7">
-        </div>
-        <div class="gallery-item"> 
-            <img src="images/project8.jpg" alt="gallery Image 8">
-        </div>
-        <div class="gallery-item">
-            <img src="images/project9.jpg" alt="gallery image 9">
-        </div>
-        <div class="gallery-item">
-            <img src="images/project10.jpg" alt="gallery image 10">
-        </div>
-    </div>
-</section>
-
-
-
-
-    <!-- Contact Us Section -->
-    <section id="contact">
-        <h1>Contact Us</h1>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-item"><p>brickwork</p></div>
+            <div class="service-item"><p>plastering</p></div>
+            <div class="service-item"><p>Tiling</p></div>
+            <div class="service-item"><p>paving</p></div>
+            <div class="service-item"><p>Roofing</p></div>
+            <div class="service-item"><p>Ceiling Installation</p></div>
+            <div class="service-item"><p>skimming</p></div>
             
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
             
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Submit</button>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Gallery</h2>
+        <p>Check out some of our work!</p>
+        <div class="gallery-grid">
+            <!-- Add relevant images for Evans Builder here -->
+            <img src="https://raw.githubusercontent.com/najmajinow/Evansbuilders/refs/heads/main/img%201.jpg                                       " alt="img 1">
+            <img src="https://raw.githubusercontent.com/najmajinow/Evansbuilders/refs/heads/main/img%202.jpg                                                        " alt="img 2 ">
+            <img src=" https://raw.githubusercontent.com/najmajinow/Evansbuilders/refs/heads/main/img%203.jpg                                                                         " alt="img 3">
+            <img src="https://raw.githubusercontent.com/najmajinow/Evansbuilders/refs/heads/main/img%204.jpg                                                                            " alt="img 4">
+            <img src="https://raw.githubusercontent.com/najmajinow/Evansbuilders/refs/heads/main/img%205.jpg                                                                             " alt="img 5">
+       <img src=" https://raw.githubusercontent.com/najmajinow/Evansbuilders/refs/heads/main/img%206.jpg                                     " alt=" img 6">
+       <img src="https://raw.githubusercontent.com/najmajinow/Evansbuilders/refs/heads/main/img%207.jpg                                          " alt=" img 7">
+       <img src="  https://raw.githubusercontent.com/najmajinow/Evansbuilders/refs/heads/main/img%208.jpg                                           " alt="img 8">
+       <img src="https://raw.githubusercontent.com/najmajinow/Evansbuilders/refs/heads/main/img%209.jpg                                                          "alt="img 9">
+       <img src="https://raw.githubusercontent.com/najmajinow/Evansbuilders/refs/heads/main/img%2010.jpg                                                                       " alt="img 10">
+       <img src="https://raw.githubusercontent.com/najmajinow/Evansbuilders/refs/heads/main/img%2011.jpg                                                      "  alt="img 11">
+       <img src="https://raw.githubusercontent.com/najmajinow/Evansbuilders/refs/heads/main/img%2012.jpg                                                        "  alt="img 12">
+       
+       
+       
+       
+       
+       
+       
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required>
+            <select id="inquiryType" name="inquiryType" required>
+                <option value="">Select Inquiry Type</option>
+                <option value="quote">Request a Quote</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Support</option>
+            </select>
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Evans builders. All Rights Reserved.</p>
+        <p>&copy; 2024 Evans Builder. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
