@@ -11,9 +11,9 @@ body {
 .header {
     background: #f8e1a1; /* Yellow */
     color: #333;
-    padding: 0.5rem; /* Reduced padding */
+    padding: 0.3rem; /* Reduced padding */
     text-align: left;
-    font-size: 1.2rem; /* Smaller font size */
+    font-size: 0.9rem; /* Smaller font size */
     position: fixed;
     top: 0;
     z-index: 1000;
