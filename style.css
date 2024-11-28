@@ -57,7 +57,8 @@ body {
     justify-content: center;
     text-align: center;
     margin-top: 2rem;
-    background-color: #fadd37; /* Washed out yellow background */
+    background-color:   #f8e1a1
+         ; /* Washed out yellow background */
     padding: 2rem;
     flex-wrap: wrap; /* Allow counters to wrap if they don't fit */
 }
@@ -180,7 +181,8 @@ body {
 
 /* Gallery Section - Square Images Side by Side */
 .gallery {
-    background-color: #fadd37; /* Washed out yellow background */
+    background-color:    #f8e1a1
+     ; /* Washed out yellow background */
     padding: 3rem 1rem;
     text-align: center;
 }
