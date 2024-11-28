@@ -51,15 +51,15 @@ body {
     color: #333;
 }
 
-/* Countdown Section */
+/* Countdown Section (Make it Horizontal on Mobile) */
 .countdown {
     display: flex;
     justify-content: center;
     text-align: center;
     margin-top: 2rem;
-    background-color: #f8e1a1; /* Yellow background */
+    background-color: #fadd37; /* Washed out yellow background */
     padding: 2rem;
-    flex-wrap: wrap; /* Allow wrapping to handle smaller screens */
+    flex-wrap: wrap; /* Allow counters to wrap if they don't fit */
 }
 
 .counter-item {
@@ -67,15 +67,14 @@ body {
     padding: 1rem;
     background: #fff;
     border-radius: 8px;
-    width: 150px;
+    width: 150px; /* Fixed width for each counter item */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .counter-item h3 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    color: #4a6d8c
-    ; /* Blue text color */
+    color: #0044cc; /* Pastel dark blue */
 }
 
 .counter-item p {
@@ -84,27 +83,18 @@ body {
     color: #333;
 }
 
-/* Mobile Specific Styles */
+/* For smaller screens: Ensure the countdown is horizontal */
 @media (max-width: 600px) {
     .countdown {
-        justify-content: space-evenly; /* Evenly space out the counter items */
+        flex-direction: row; /* Horizontal layout */
+        gap: 1rem; /* Space between items */
     }
-
     .counter-item {
-        width: 120px; /* Slightly smaller width for mobile */
-        margin: 0.5rem; /* Add spacing between counter items */
-    }
-
-    .counter-item h3 {
-        font-size: 1.8rem; /* Adjust font size for headings */
-    }
-
-    .counter-item p {
-        font-size: 0.9rem; /* Adjust font size for paragraph */
+        flex: 1 1 calc(50% - 1rem); /* Allow two items per row */
+        max-width: 150px; /* Optional: Set max width for counters */
+        text-align: center;
     }
 }
-
-
 
 
 
@@ -186,34 +176,63 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Gallery Section */
+
+
+/* Gallery Section - Square Images Side by Side */
 .gallery {
-    background: #f8e1a1; /* Yellow background */
+    background-color: #fadd37; /* Washed out yellow background */
     padding: 3rem 1rem;
     text-align: center;
 }
 
 .gallery h2 {
-    color:  #4a6d8c
-    ; /* Blue heading */
+    color: #0044cc; /* Pastel dark blue heading */
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
-    gap: 1rem;
+    display: flex;
     justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .gallery-grid img {
-    width: 150px;
-    height: 150px;
+    width: 150px; /* Fixed width for square */
+    height: 150px; /* Fixed height for square */
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Adjust image size on smaller screens */
+@media (max-width: 600px) {
+    .gallery-grid img {
+        width: 100px; /* Optional: Adjust size on small screens */
+        height: 100px; /* Optional: Adjust size on small screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Contact Section */
 .contact {
